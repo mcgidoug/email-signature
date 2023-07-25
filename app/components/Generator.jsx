@@ -15,51 +15,9 @@ const Generator = () => {
   const [githubText, setGithubText] = useState("");
 
   // GENERAL ================================================================
-  const handleNameText = (event) => {
-    const newNameText = event.target.value;
-    setNameText(newNameText);
-  };
-
-  const handleWebsiteText = (event) => {
-    const newWebsiteText = event.target.value;
-    setWebsiteText(newWebsiteText);
-  };
-
-  const handleNumberText = (event) => {
-    const newNumberText = event.target.value;
-    setNumberText(newNumberText);
-  };
-
-  const handleEmailText = (event) => {
-    const newEmailText = event.target.value;
-    setEmailText(newEmailText);
-  };
-
-  // SOCIALS ================================================================
-
-  const handleLinkedinText = (event) => {
-    const newLinkedinText = event.target.value;
-    setLinkedinText(newLinkedinText);
-  };
-
-  const handleFacebookText = (event) => {
-    const newFacebookText = event.target.value;
-    setFacebookText(newFacebookText);
-  };
-
-  const handleInstagramText = (event) => {
-    const newInstagramText = event.target.value;
-    setInstagramText(newInstagramText);
-  };
-
-  const handleYoutubeText = (event) => {
-    const newYoutubeText = event.target.value;
-    setYoutubeText(newYoutubeText);
-  };
-
-  const handleGithubText = (event) => {
-    const newGithubText = event.target.value;
-    setGithubText(newGithubText);
+  const handleChange = (e, func) => {
+    const newValue = e.target.value;
+    func(newValue);
   };
 
   return (
@@ -73,28 +31,28 @@ const Generator = () => {
             className="text-black"
             type="text"
             placeholder="Your name"
-            onChange={handleNameText}
+            onChange={(e) => handleChange(e, setNameText)}
           />
           <h2>Website</h2>
           <input
             className="text-black"
             type="text"
             placeholder="Your website"
-            onChange={handleWebsiteText}
+            onChange={(e) => handleChange(e, setWebsiteText)}
           />
           <h2>Phone</h2>
           <input
             className="text-black"
             type="text"
             placeholder="Your number"
-            onChange={handleNumberText}
+            onChange={(e) => handleChange(e, setNumberText)}
           />
           <h2>Email</h2>
           <input
             className="text-black"
             type="text"
             placeholder="Your email"
-            onChange={handleEmailText}
+            onChange={(e) => handleChange(e, setEmailText)}
           />
         </div>
 
@@ -106,35 +64,35 @@ const Generator = () => {
             className="text-black"
             type="text"
             placeholder="Your LinkedIn"
-            onChange={handleLinkedinText}
+            onChange={(e) => handleChange(e, setLinkedinText)}
           />
           <h2>Facebook</h2>
           <input
             className="text-black"
             type="text"
             placeholder="Your Facebook"
-            onChange={handleFacebookText}
+            onChange={(e) => handleChange(e, setFacebookText)}
           />
           <h2>Instagram</h2>
           <input
             className="text-black"
             type="text"
             placeholder="Your Instagram"
-            onChange={handleInstagramText}
+            onChange={(e) => handleChange(e, setInstagramText)}
           />
           <h2>YouTube</h2>
           <input
             className="text-black"
             type="text"
             placeholder="Your YouTube"
-            onChange={handleYoutubeText}
+            onChange={(e) => handleChange(e, setYoutubeText)}
           />
           <h2>Github</h2>
           <input
             className="text-black"
             type="text"
             placeholder="Your Github"
-            onChange={handleGithubText}
+            onChange={(e) => handleChange(e, setGithubText)}
           />
         </div>
       </div>
